@@ -1,0 +1,20 @@
+.welcomPage-1 {
+    display: flex;
+    flex-direction: column;
+
+    .block-A, .block-B, .block-C {
+        width: 100%;
+        height: 800px;
+    };
+    .block-A {
+        background-color: aqua;
+    }
+
+    .block-B {
+        background-color: bisque;
+    }
+
+    .block-C {
+        background-color: cornsilk;
+    }
+}

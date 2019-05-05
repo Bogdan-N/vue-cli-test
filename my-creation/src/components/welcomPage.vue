@@ -1,8 +1,9 @@
 <template>
   <section>
-    <div class="first-page" style="wigth:300px; heigth: 500px;">
-      <button>azaza</button>
-      <router-link :to="{ name: 'childhood' }">Go to childhood</router-link>
+    <div class="welcomPage-1">
+      <div class="block-A"></div>
+      <div class="block-B"></div>
+      <div class="block-C"></div>
     </div>
   </section>
 </template>
@@ -14,9 +15,11 @@ export default {
     msg: String
   },
   methods: {
-    select () {
-
-    }
+    select () {}
+  },
+  beforeCreate () {
+    // const w = window.innerWidth
+    // const h = window.innerHeight
   }
 }
 </script>
