@@ -1,30 +1,38 @@
 .welcomPage-1 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    .block-A, .block-B, .block-C {
-        width: 100%;
-        position: absolute;
-    };
-    .block-A {
-        background-color: aqua;
-        z-index: 3;
-        top: 0;
-        height: 100%;
-    }
+  .block-A,
+  .block-B,
+  .block-C {
+    width: 100%;
+    position: absolute;
+  }
+  .block-A {
+    background-color: aqua;
+    z-index: 3;
+    top: 0;
+    height: 100%;
+  }
 
-    .block-B {
-        background-color: bisque;
-        z-index: 4;
-        height: 100%;
-        top: 20%;
-    }
+  .block-B {
+    background-color: bisque;
+    z-index: 4;
+    height: 100%;
+    top: 100%;
 
-    .block-C {
-        background-color: cornsilk;
-        z-index: 1;
+    &.active {
+      transition-property: top;
+      transition-duration: 3s;
+      top: 10%;
     }
+  }
+
+  .block-C {
+    background-color: cornsilk;
+    z-index: 1;
+  }
 }
- body {
-    overflow-y: hidden;
- }
+//  body {
+//     overflow-y: hidden;
+//  }

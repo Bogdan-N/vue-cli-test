@@ -1,11 +1,21 @@
 <template>
-  <section>
-    <div class="welcomPage-1">
-      <div class="block-A"></div>
-      <div class="block-B"></div>
-      <div class="block-C"></div>
-    </div>
-  </section>
+  <div class="welcomPage-1">
+    <section class="block-A">
+      <div>
+        <button>ON section A</button>
+      </div>
+    </section>
+    <section class="block-B" :class="{ 'active': someVAriable }">
+      <div>
+        <button>ON section B</button>
+      </div>
+    </section>
+    <section class="block-C">
+      <div>
+        <button>ON section C</button>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -14,12 +24,22 @@ export default {
   props: {
     msg: String
   },
-  methods: {
-    select () {}
+  data() {
+    return {
+      someVAriable: false,
+    }
   },
-  beforeCreate () {
-    // const w = window.innerWidth
-    // const h = window.innerHeight
+  methods: {
+    onScroll () {
+      this.someVAriable = true;
+      // setTimeout(() => this.someVAriable = false, 3000);
+    }
+  },
+  created: function () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  destroyed: function () {
+    window.removeEventListener('scroll', this.onScroll)
   }
 }
 </script>
