@@ -4,17 +4,27 @@
 
     .block-A, .block-B, .block-C {
         width: 100%;
-        height: 800px;
+        position: absolute;
     };
     .block-A {
         background-color: aqua;
+        z-index: 3;
+        top: 0;
+        height: 100%;
     }
 
     .block-B {
         background-color: bisque;
+        z-index: 4;
+        height: 100%;
+        top: 20%;
     }
 
     .block-C {
         background-color: cornsilk;
+        z-index: 1;
     }
 }
+ body {
+    overflow-y: hidden;
+ }
