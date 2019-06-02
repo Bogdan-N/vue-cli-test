@@ -24,14 +24,15 @@ export default {
   props: {
     msg: String
   },
-  data() {
+  data () {
     return {
-      someVAriable: false,
+      someVAriable: false
     }
   },
   methods: {
-    onScroll () {
-      this.someVAriable = true;
+    onScroll (event) {
+      this.someVAriable = true
+      event.preventDefault()
       // setTimeout(() => this.someVAriable = false, 3000);
     }
   },
