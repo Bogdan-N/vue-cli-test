@@ -2,37 +2,19 @@
   display: flex;
   flex-direction: column;
 
-  .block-A,
-  .block-B,
-  .block-C {
+  .block {
     width: 100%;
-    position: absolute;
   }
-  .block-A {
+  .first {
     background-color: aqua;
-    z-index: 3;
-    top: 0;
-    height: 100%;
   }
 
-  .block-B {
+  .second {
     background-color: bisque;
-    z-index: 4;
-    height: 100%;
-    top: 100%;
-
-    &.active {
-      transition-property: top;
-      transition-duration: 3s;
-      top: 10%;
-    }
   }
 
-  .block-C {
+  .third {
     background-color: cornsilk;
-    z-index: 4;
-    height: 100%;
-    top: 100%;
   }
 }
 //  body {
